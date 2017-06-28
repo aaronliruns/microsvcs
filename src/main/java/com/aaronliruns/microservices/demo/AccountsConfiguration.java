@@ -62,6 +62,9 @@ public class AccountsConfiguration {
 			jdbcTemplate.update("UPDATE T_ACCOUNT SET balance = ? WHERE number = ?", balance, number);
 		}
 
+		//JndiDataSourceLookup dataSourceLookup = new JndiDataSourceLookup();
+		//return dataSourceLookup.getDataSource("java:comp/env/jdbc/testdb");
+
 		return dataSource;
 	}
 }

@@ -8,29 +8,24 @@ import org.springframework.data.repository.Repository;
 
 
 public interface AccountRepository extends Repository<Account, Long> {
-	/**
-	 * Find an account with the specified account number.
-	 *
-	 * @param accountNumber
-	 * @return The account if found, null otherwise.
+
+
+	/*
+	The query builder mechanism built into Spring Data repository infrastructure is useful for
+	building constraining queries over entities of the repository.
+	The mechanism strips the prefixes find…By, read…By, and get…By from the method and starts parsing the rest of it.
 	 */
+
 	public Account findByNumber(String accountNumber);
 
-	/**
-	 * Find accounts whose owner name contains the specified string
-	 * 
-	 * @param partialName
-	 *            Any alphabetic string.
-	 * @return The list of matching accounts - always non-null, but may be
-	 *         empty.
-	 */
+
 	public List<Account> findByOwnerContainingIgnoreCase(String partialName);
 
-	/**
-	 * Fetch the number of accounts known to the system.
-	 * 
-	 * @return The number of accounts.
-	 */
+	/*
+	bind them directly using the Spring Data JPA @Query annotation rather than annotating them to the domain class.
+	This will free the domain class from persistence specific information and co-locate the query to the repository interface.
+	*/
+
 	@Query("SELECT count(*) from Account")
 	public int countAccounts();
 }
