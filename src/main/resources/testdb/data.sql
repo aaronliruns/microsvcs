@@ -17,6 +17,6 @@ insert into T_ACCOUNT (NUMBER, NAME) values ('123456014', 'John S. O''Leary');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456015', 'Gladys D. Smith');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456016', 'Sally O. Thygesen');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456017', 'Rachel Vogt');
-insert into T_ACCOUNT (NUMBER, NAME) values ('123456018', 'Julia DeLong');
+insert into T_ACCOUNT (NUMBER, NAME) values ('123456018', 'Aaron Li');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456019', 'Mark T. Rizzoli');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456020', 'Maria J. Angelo');
